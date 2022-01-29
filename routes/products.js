@@ -1,12 +1,13 @@
 const router = require('express').Router();
 
-require('../db/connection')
+require('../db/connection');
 
-//home route...
-router.get('/', (req, res) => {
-    res.send(`<h1>Store API</h1><a href="/api/v1/porducts">Go To Product</a>`)
-})
+const { getAllProducts, getAllProductsStatic } = require('../controllers/products')
 
+//products...Route.....
+
+router.route('/').get(getAllProducts);
+router.route('/static').get(getAllProductsStatic);
 
 
 
