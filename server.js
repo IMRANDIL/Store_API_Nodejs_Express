@@ -2,8 +2,13 @@ const express = require('express');
 
 require('dotenv').config();
 
+//async errors...
+
+
 const app = express();
-const router = require('./routes/products')
+const router = require('./routes/products');
+const notFountMiddleWare = require('./middleware/not-found');
+const errorHandler = require('./middleware/error-handler')
 //MIDDLEWARE.......
 
 app.use(express.json());
@@ -14,11 +19,9 @@ app.use('/', router)
 
 
 
+app.use(notFountMiddleWare)
 
-
-
-
-
+app.use(errorHandler)
 
 
 
