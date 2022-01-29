@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 
 
 //home route...
-app.get('/', (req, res) => {
-    res.send(`<h1>Store API</h1><a href="/api/v1/porducts">Go To Product</a>`)
+app.get('/home', (req, res) => {
+    res.send(`<h1>Store API</h1><a href="http://localhost:5000/api/v1/products">Go To Product</a>`)
 })
 
 
