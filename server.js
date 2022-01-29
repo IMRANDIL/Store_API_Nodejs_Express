@@ -3,7 +3,7 @@ const express = require('express');
 require('dotenv').config();
 
 //async errors...
-
+require('express-async-errors')
 
 const app = express();
 const router = require('./routes/products');
