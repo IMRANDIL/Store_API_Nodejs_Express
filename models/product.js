@@ -10,7 +10,7 @@ const prodcutSchema = new mongoose.Schema({
         type: Number,
         required: [true, 'price must be provided']
     },
-    feature: {
+    featured: {
         type: Boolean,
         default: false
     },
